@@ -57,9 +57,12 @@ $ sudo ln -s /path/to/your/file/w1_therm.ko w1_therm.ko
 ```
 This way you the module will run on the `w1_therm` module you have build. Be aware that you need to build the module on the same kernel that the one you will run on. You also need to rebuild the module each time you will change your kernel.
 
+
 ## Sysfs entry
 
 The sysfs interface of the module is :
+ - By default all write operations are restricted to root permissions -
+
 
 * **w1_slave (RW)** : Old driver way, kept for compatibility
   * *read* : return 2 lines with the hexa output of the device return the CRC check return temperature in 1/1000°
